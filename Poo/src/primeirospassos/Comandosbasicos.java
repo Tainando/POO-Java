@@ -1,3 +1,5 @@
+package primeirospassos;
+
 import java.util.Scanner;
 
 public class Comandosbasicos {
