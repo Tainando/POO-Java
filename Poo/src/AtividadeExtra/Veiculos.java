@@ -35,10 +35,8 @@ public class Veiculos {
     }
 
     public void setKM(float KM) {
-        if (KM < 0) {
-            System.out.println("kilometragem não autorizada");
             this.KM = KM;
-        }
+
     }
     @Override
     public String toString() {

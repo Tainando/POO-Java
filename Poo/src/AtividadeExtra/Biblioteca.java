@@ -37,9 +37,6 @@ public class Biblioteca {
     }
 
     public void setAnoPubli(int anoPubli) {
-        if (AnoPubli <= 1900) {
-            System.out.println("data de publicação invalida");
-        }
         AnoPubli = anoPubli;
     }
 

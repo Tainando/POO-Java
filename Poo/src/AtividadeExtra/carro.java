@@ -1,30 +1,31 @@
 package AtividadeExtra;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class carro {
     static Scanner sc = new Scanner(System.in);
-    public static void main (String [] args){
-        Veiculos carro1 = new Veiculos();
 
-        System.out.println("Digite o modelo do carro");
-        carro1.setModeloVeiculo(sc.next());
-        System.out.println("Digite a placa do veiculo");
-        carro1.setPlaca(sc.next());
-        System.out.println("Digite a Kilometragem do Veiculo");
-        carro1.setKM(sc.nextInt());
+    public static void main(String[] args) {
+        ArrayList<Veiculos> veiculos = new ArrayList<>();
 
-        System.out.println(carro1.toString());
+        for (int contador = 0; contador <= 6; contador++) {
+            Veiculos carro = new Veiculos();
+            System.out.println("Digite o modelo do carro");
+            carro.setModeloVeiculo(sc.next());
+            System.out.println("Digite a placa do veiculo");
+            carro.setPlaca(sc.next());
 
-        Veiculos carro2 = new Veiculos();
+            while (carro.getKM() <= 0){
+                System.out.println("digite a kilometragem do veiculo");
+                carro.setKM(sc.nextFloat());
+                System.out.println("kilometragem invalida");
+                carro.setKM(sc.nextFloat());
 
-        System.out.println("Digite o modelo do carro");
-        carro2.setModeloVeiculo(sc.next());
-        System.out.println("Digite a placa do veiculo");
-        carro2.setPlaca(sc.next());
-        System.out.println("Digite a Kilometragem do Veiculo");
-        carro2.setKM(sc.nextInt());
+            }
 
-        System.out.println(carro2.toString());
+          System.out.println(carro.toString());
+        }
+
     }
 }
