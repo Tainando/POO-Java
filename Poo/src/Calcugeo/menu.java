@@ -38,6 +38,7 @@ public class menu {
                             System.out.println("opção invalida");
                         }
 
+
                         switch (opc2) {
                             case 1: {
                                 System.out.println("perimetro:" + quadrado.calcularPerimetro());
@@ -104,4 +105,6 @@ public class menu {
                 + "3. Volume\n");
         return sc.nextInt();
     }
+    static public void 
+
 }
