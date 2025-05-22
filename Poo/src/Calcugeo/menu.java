@@ -8,6 +8,7 @@ public class menu {
 
     public static void main(String[] args) {
         int opc;
+        formaGeo forma;
         do {
             System.out.println("bem vindo ao sistema de Calculadora de Forma Geometrica");
             System.out.println("Qual forma você deseja usar?");
@@ -28,33 +29,13 @@ public class menu {
                     System.out.println("digite o lado:");
                     double lado = sc.nextDouble();
 
-                    quadrado quadrado = new quadrado(cor, lado);
+                    forma = new quadrado(cor, lado);
 
                     int opc2;
                     do {
                         opc2 = menuCalculo();
-
-                        if (opc2 < 0 || opc2 > 3) {
-                            System.out.println("opção invalida");
-                        }
-
-
-                        switch (opc2) {
-                            case 1: {
-                                System.out.println("perimetro:" + quadrado.calcularPerimetro());
-                                break;
-                            }
-                            case 2: {
-                                System.out.println("Area:" + quadrado.calculoArea());
-                                break;
-                            }
-                            case 3: {
-                                System.out.println("volume:" + quadrado.calcularVolume());
-                                break;
-                            }
-                        }
+                        retornarCalculo(opc2, forma);
                     } while (opc2 != 0);
-
                     break;
                 }
                 case 2: {
@@ -67,35 +48,19 @@ public class menu {
                     System.out.println("digite o comprimento do retangulo");
                     double comprimento = sc.nextDouble();
 
-                    Retangulo retangulo = new Retangulo(cor, largura, altura, comprimento);
+                    forma = new Retangulo(cor, largura, altura, comprimento);
 
                     int opc3;
                     do {
                         opc3 = menuCalculo();
-
-                        if (opc3 < 0 || opc3 > 3) {
-                            System.out.println("opção invalida");
-                        }
-                        switch (opc3) {
-                            case 1: {
-                                System.out.println("largura:" + retangulo.calcularPerimetro());
-                                break;
-                            }
-                            case 2: {
-                                System.out.println("altura:" + retangulo.calculoArea());
-                                break;
-                            }
-                            case 3: {
-                                System.out.println("comprimento:" + retangulo.calcularVolume());
-                                break;
-                            }
-                        }
+                        retryCalculo(opc3, forma);
                     } while (opc3 != 0);
                     break;
                 }
             }
         } while (opc != 0);
     }
+
     static public int menuCalculo() {
         System.out.println("Qual calculo deseja fazer?");
         System.out.println("Opções: \n"
@@ -105,6 +70,31 @@ public class menu {
                 + "3. Volume\n");
         return sc.nextInt();
     }
-    static public void 
+    static public void retornarCalculo(int opc2, formaGeo forma) {
+        if (opc2 == 1){
+            System.out.println("perimetro:" + forma.calcularPerimetro());
 
+        }
+        if (opc2 == 2) {
+            System.out.println("Area:" + forma.calculoArea());
+
+        }
+        if (opc2 == 3) {
+            System.out.println("volume:" + forma.calcularVolume());
+
+        }
+    }
+
+    static public void retryCalculo(int opc3, formaGeo forma) {
+        if (opc3 == 1) {
+            System.out.println("largura:" + forma.calcularPerimetro());
+        }
+        if (opc3 == 2) {
+            System.out.println("altura:" + forma.calculoArea());
+        }
+        if (opc3 == 3) {
+            System.out.println("comprimento:" + forma.calcularVolume());
+        }
+    }
 }
+
