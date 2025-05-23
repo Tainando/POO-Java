@@ -15,7 +15,8 @@ public class menu {
             System.out.println("opções: \n" +
                     "0. Sair\n" +
                     "1. quadrado\n" +
-                    "2.retangulo \n");
+                    "2.retangulo \n" +
+                    "3.Circulo\n");
             opc = sc.nextInt();
 
             switch (opc) {
@@ -34,6 +35,7 @@ public class menu {
                     int opc2;
                     do {
                         opc2 = menuCalculo();
+
                         retornarCalculo(opc2, forma);
                     } while (opc2 != 0);
                     break;
@@ -53,14 +55,29 @@ public class menu {
                     int opc3;
                     do {
                         opc3 = menuCalculo();
-                        retryCalculo(opc3, forma);
+
+                        retornarCalculo(opc3, forma);
                     } while (opc3 != 0);
                     break;
+                }
+                case 3: {
+                    System.out.println("digite a cor do circulo");
+                    String cor = sc.next();
+                    System.out.println("digite o raio do circulo ");
+                    double raio = sc.nextDouble();
+
+                    forma = new circulo(cor, raio);
+
+                    int opc4;
+                    do {
+                        opc4 = menuCalculo();
+
+                        retornarCalculo(opc4, forma);
+                    } while (opc4 != 0);
                 }
             }
         } while (opc != 0);
     }
-
     static public int menuCalculo() {
         System.out.println("Qual calculo deseja fazer?");
         System.out.println("Opções: \n"
@@ -70,31 +87,23 @@ public class menu {
                 + "3. Volume\n");
         return sc.nextInt();
     }
-    static public void retornarCalculo(int opc2, formaGeo forma) {
-        if (opc2 == 1){
-            System.out.println("perimetro:" + forma.calcularPerimetro());
+    static public void retornarCalculo(int opc, formaGeo forma) {
+            if (opc < 0 || opc > 4)
+                System.out.println("opção invalida");
 
-        }
-        if (opc2 == 2) {
-            System.out.println("Area:" + forma.calculoArea());
-
-        }
-        if (opc2 == 3) {
-            System.out.println("volume:" + forma.calcularVolume());
-
-        }
-    }
-
-    static public void retryCalculo(int opc3, formaGeo forma) {
-        if (opc3 == 1) {
-            System.out.println("largura:" + forma.calcularPerimetro());
-        }
-        if (opc3 == 2) {
-            System.out.println("altura:" + forma.calculoArea());
-        }
-        if (opc3 == 3) {
-            System.out.println("comprimento:" + forma.calcularVolume());
+        switch (opc) {
+            case 1: {
+                System.out.println("perimetro:" + forma.calcularPerimetro());
+                break;
+            }
+            case 2: {
+                System.out.println("Area:" + forma.calculoArea());
+                break;
+            }
+            case 3: {
+                System.out.println("volume:" + forma.calcularVolume());
+                break;
+            }
         }
     }
 }
-

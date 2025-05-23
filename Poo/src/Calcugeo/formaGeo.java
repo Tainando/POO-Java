@@ -3,7 +3,6 @@ package Calcugeo;
 public class formaGeo {
     private String cor;
 
-
     formaGeo(String cor){
         this.cor = cor;
     }
@@ -22,5 +21,4 @@ public class formaGeo {
         System.out.println("invalido");
         return 0.0;
     }
-
 }
