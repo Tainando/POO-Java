@@ -16,7 +16,7 @@ public class estagiario extends funcionario{
         this.horasEstagio = horasEstagio;
     }
     public double calcularBonus(){
-        return this.SalaBonu() * 0.5;
+        return this.getSalarioBase() * 0.05 + this.getSalarioBase();
     }
 }
 

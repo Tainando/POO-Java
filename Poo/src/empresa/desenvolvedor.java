@@ -16,6 +16,6 @@ public class desenvolvedor extends funcionario{
         this.linguagemFavorita = linguagemFavorita;
     }
     public double calcularBonus(){
-        return this.salarioBonus() * 0.10;
+        return this.getSalarioBase() * 0.10 + this.getSalarioBase();
     }
 }

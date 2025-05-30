@@ -19,6 +19,6 @@ public class gerente extends  funcionario{
 
     @Override
     public double calcularBonus() {
-        return this.getSalarioBase() * 15;
+        return this.getSalarioBase() * 0.15 + this.getSalarioBase();
     }
 }
