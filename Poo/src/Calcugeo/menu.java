@@ -88,8 +88,8 @@ public class menu {
         return sc.nextInt();
     }
     static public void retornarCalculo(int opc, formaGeo forma) {
-            if (opc < 0 || opc > 4)
-                System.out.println("opção invalida");
+        if (opc < 0 || opc > 4)
+            System.out.println("opção invalida");
 
         switch (opc) {
             case 1: {

@@ -10,7 +10,6 @@ public class Retangulo extends formaGeo{
     this.altura = altura;
     this.largura = largura;
     this.comprimento = comprimento;
-
     }
 
     public double getAltura() {
