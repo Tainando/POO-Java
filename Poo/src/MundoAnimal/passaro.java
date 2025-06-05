@@ -21,6 +21,6 @@ public abstract class passaro extends Animal{
     }
     @Override
     public void exibirinformaoees(String nome, int idade) {
-        System.out.println("O nome do passaro é" + nome+ "a idade do passaro é:" +idade+ "e a cor das penas do passaro é" +corPenas+".");;
+        System.out.println("O nome do passaro é" + this.getNome()+ "a idade do passaro é:" +this.getIdade()+ "e a cor das penas do passaro é" +corPenas+".");;
     }
 }

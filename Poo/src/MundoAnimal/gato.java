@@ -21,6 +21,6 @@ public abstract class gato extends Animal{
     }
     @Override
     public void exibirinformaoees(String nome, int idade) {
-        System.out.println("O nome do gato é" + nome+ "a idade do gato é:" +idade+ "e a cor do pelo do gato é" +corPelo+".");;
+        System.out.println("O nome do gato é" + this.getNome()+ "a idade do gato é:" +this.getIdade()+ "e a cor do pelo do gato é" +corPelo+".");;
     }
 }
