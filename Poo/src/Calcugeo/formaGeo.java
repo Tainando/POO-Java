@@ -1,26 +1,15 @@
 package Calcugeo;
 
-public class formaGeo {
+public abstract class formaGeo {
     private String cor;
-
 
     formaGeo(String cor){
         this.cor = cor;
     }
 
-    public double calcularPerimetro(){
-        System.out.println("invalido");
-        return 0.0;
-    }
+    public abstract double calcularPerimetro();
 
-    public double calculoArea(){
-        System.out.println("invalido");
-        return 0.0;
-    }
+    public abstract double calculoArea();
 
-    public double calcularVolume(){
-        System.out.println("invalido");
-        return 0.0;
-    }
-
+    public abstract double calcularVolume();
 }

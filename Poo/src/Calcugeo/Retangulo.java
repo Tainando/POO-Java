@@ -5,12 +5,11 @@ public class Retangulo extends formaGeo{
     private double altura;
     private double comprimento;
 
-    public Retangulo(String cor, double largura, double altura, double comprimento){
+    public Retangulo (String cor, double largura, double altura, double comprimento){
     super(cor);
     this.altura = altura;
     this.largura = largura;
     this.comprimento = comprimento;
-
     }
 
     public double getAltura() {
